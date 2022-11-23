@@ -12,5 +12,6 @@ public class WhileTest01 {
         //定义一个变量记录回文整数初始值
         int x = 121;
         //定义一个变量记录回文
+
     }
 }
