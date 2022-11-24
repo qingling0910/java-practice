@@ -1,5 +1,7 @@
 package tk.amrom;
 
+import javax.print.attribute.standard.PresentationDirection;
+
 public class WhileTest01 {
     public static void main(String[] args) {
         /*
@@ -10,8 +12,18 @@ public class WhileTest01 {
 
          */
         //定义一个变量记录回文整数初始值
-        int x = 121;
-        //定义一个变量记录回文
+       int x = 121;
+       //定义一个变量，记录x原来的值
+        int temp = x;
+       //定义一个变量记录倒过来的数
+       int num = 0;
+       while(x != 0){
+           int ge = x % 10;
+           x = x / 10;
+           num = num * 10 + ge;
 
+       }
+        System.out.println(num);
+        System.out.println(num == temp);
     }
 }
