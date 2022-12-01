@@ -25,32 +25,29 @@ public class Test01 {
         if(month >= 5 && month <=10){
             //旺季
             //3、判断是经济舱还是头等舱
-            if(seat == 0){
-                //头等舱
-                //4、计算机票价格
-                ticket = (int)(ticket * 0.9);
-            }else if(seat == 1){
-                //经济舱
-                ticket = (int)(ticket * 0.85);
-            }else {
-                System.out.println("没有这个舱位");
-            }
+            ticket = getPrice(ticket,seat,0.9,0.85);
 
         } else if  ((month >= 1 && month <=4) || (month >= 11 && month <= 12)) {
             //淡季
-                if(seat == 0){
-                    //头等舱
-                    ticket = (int)(ticket * 0.7);
-                }else if(seat == 1){
-                    //经济舱
-                    ticket = (int)(ticket * 0.65);
-                }else {
-                    System.out.println("没有这个舱位");
-                }
-        }else {
-            System.out.println("你输入的月份不合法");
+            ticket = getPrice(ticket,seat,0.7,0.65);
         }
             System.out.println(ticket);
+
+    }
+    //1、我要干什么  根据舱位计算机票价格
+    //2、干这件事情需要什么  机票原价、舱位、折扣
+    //3、是否需要调用方法  返回
+    public static int getPrice(int ticket, int seat, double v0, double v1) {
+        if (seat == 0) {
+            //头等舱
+            ticket = (int) (ticket * 0.7);
+        } else if (seat == 1) {
+            //经济舱
+            ticket = (int) (ticket * 0.65);
+        } else {
+            System.out.println("没有这个舱位");
+        }
+        return ticket;
 
     }
 }
