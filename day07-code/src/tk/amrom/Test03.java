@@ -16,15 +16,19 @@ public class Test03 {
         //分析：1、随机生成 Random
         //2、大写字母或者小写字母  ASCII码表
         //3、最后一位是数字  随机生成数字  拼接
+        //定义数组
         char [] chs = new char[52];
         for (int i = 0; i < chs.length; i++) {
+            //ASCII码表判断
             if(i <= 25){
                 chs[i] = (char)(97 + i);
             }else{
                 chs[i] = (char)(65 + i - 26);
             }
         }
+      //定义变量，接受结果
         String result = "";
+        //随机抽取4次
         Random r = new Random();
         for (int i = 0; i < 4; i++) {
             int randomIndex = r.nextInt(chs.length);
