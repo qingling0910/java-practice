@@ -1,6 +1,6 @@
 package tk.amrom.day07;
 
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.Random;
 import java.util.Scanner;
