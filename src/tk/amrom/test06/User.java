@@ -1,5 +1,7 @@
 package tk.amrom.test06;
 
+import tk.amrom.test07.Role;
+
 public class User {
     //属性
     private String username;
@@ -59,4 +61,6 @@ public class User {
     public int getAge(){
         return age;
     }
+
+
 }
