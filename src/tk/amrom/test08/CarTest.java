@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class CarTest {
     public static void main(String[] args) {
+        /*
+        定义数组存储3部汽车对象
+        汽车的属性：品牌、价格、颜色
+        创建3个汽车对象，数据通过键盘录入而来，并把数据存入到数组当中
+         */
         //1、创建数组
         Car[] arr = new Car[3];
 

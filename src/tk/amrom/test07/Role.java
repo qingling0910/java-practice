@@ -3,6 +3,11 @@ package tk.amrom.test07;
 import java.util.Random;
 
 public class Role {
+    /*
+    文字版格斗游戏
+    格斗游戏，每个游戏角色的姓名、血量，都不相同，在选定人物的时候（new对象的时候），
+    这些信息就应该被确定下来
+     */
     private String name;
     private int blood;
     private char gender;
