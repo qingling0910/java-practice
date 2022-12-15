@@ -3,7 +3,7 @@ package tk.amrom.day11;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class test05 {
+public class Test05 {
     public static void main(String[] args) {
         /*
         需求：
@@ -12,12 +12,12 @@ public class test05 {
         要求：对象的数据来自键盘录入
          */
         //1、创建集合
-        ArrayList<student> list = new ArrayList<>();
+        ArrayList<Student> list = new ArrayList<>();
 
         //2、键盘录入学生对象
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
-            student s = new student();
+            Student s = new Student();
 
             System.out.println("请输入学生的姓名：");
             String name =  sc.next();
@@ -35,7 +35,7 @@ public class test05 {
         }
         //3、遍历
         for (int i = 0; i < list.size(); i++) {
-            student s = list.get(i);
+            Student s = list.get(i);
             System.out.println(s.getName() + ", " + s.getAge());
         }
     }

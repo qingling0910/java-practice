@@ -2,7 +2,7 @@ package tk.amrom.day11;
 
 import java.util.ArrayList;
 
-public class test03 {
+public class Test03 {
     public static void main(String[] args) {
         /*
     定义一个集合，添加字符，并进行遍历
