@@ -20,19 +20,67 @@ public class App {
                    break;
 
                case "2" :
-                   System.out.println("注册");
+                   register();
                    break;
 
                case "3":
-                   System.out.println("忘记密码");
+                   forgetPassword();
                    break;
 
+               case "4" :
+                   System.out.println("谢谢使用，再见！");
+                    System.exit(0);
                default:
                    System.out.println("没有这个选项");
            }
        }
     }
+    //忘记密码
+    private static void forgetPassword(ArrayList<User> list) {
+        System.out.println("忘记密码");
+    }
+    //注册
+    private static boolean register(ArrayList<User> list) {
 
-    private static void login() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入用户名");
+        String username = sc.next();
+        //先验证格式是否正确，再验证是否唯一
+
+        boolean flag = checkUsername(username);
+    }
+
+    private static boolean checkUsername(String username) {
+        //用户名长度必须在3~15位之间
+        int len = username.length();
+        if(len < 3 || len > 15){
+            return false;
+        }
+        //代码执行到这里，说明用户名长度在3～15之间
+        //只能是字母加数字的组合
+        for (int i = 0; i < username.length(); i++) {
+            char c = username.charAt(i);
+            if(!((c > 'a' && c < 'z') || (c > 'A' && c < 'Z') || (c > '0' && c < '9'))){
+                return false;
+            }
+        }
+        //当代码执行到这里，说明用户名满足两个条件：1、长度满足；2、内容满足
+        int count = 0
+        for (int i = 0; i < username.length(); i++) {
+            char c = username.charAt(i);
+            if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
+                count++;
+                break;
+            }
+        }
+                return count > 0;
+//        用户名唯一
+//        用户名长度必须在3~15位之间
+//        ，但是不能是纯数字
+    }
+
+    //登录
+    private static void login(ArrayList<User> list) {
+        System.out.println("登录");
     }
 }
