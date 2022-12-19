@@ -60,7 +60,7 @@ heima004	赵六	 	26		 深圳
 ```
  */
 public class StudentSystem {
-    public static void main(String[] args) {
+    public static void startStudentSystem() {
         ArrayList<StudentNew> list = new ArrayList<>();
         loop:while (true){
             System.out.println("-----------欢迎来到黑马学生管理系统-----------------");
