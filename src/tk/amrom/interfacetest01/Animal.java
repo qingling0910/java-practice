@@ -1,4 +1,4 @@
-package tk.amrom.interfacetest;
+package tk.amrom.interfacetest01;
 
 public  abstract class Animal {
     private String name;

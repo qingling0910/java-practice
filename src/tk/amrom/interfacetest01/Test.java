@@ -1,4 +1,4 @@
-package tk.amrom.interfacetest;
+package tk.amrom.interfacetest01;
 
 public class Test {
     public static void main(String[] args) {
